@@ -1,7 +1,8 @@
+
 import time
 import threading
-import random
 
+from rag.model import retriever, llm, prompt
 
 class Worker:
     def __init__(self, worker_id):
@@ -12,48 +13,55 @@ class Worker:
     def process(self, request):
         start_time = time.time()
 
-        # 🔒 Track active requests (for monitoring / future load-aware)
         with self.lock:
             self.active_requests += 1
 
         try:
-            query = request.get("query", "")
+            if isinstance(request, dict):
+                query = request.get("query", "")
+                req_id = request.get("id")
+            else:
+                query = request.query
+                req_id = request.id
 
-            # 🔹 Step 1: RAG (stub for now)
             context = self.retrieve_context(query)
 
-            # 🔹 Step 2: LLM inference (stub for now)
             result = self.run_llm(query, context)
 
             latency = time.time() - start_time
 
             response = {
+                "id": req_id,
                 "worker_id": self.id,
                 "result": result,
-                "latency": latency
+                "latency": latency,
+                "status": "success"
             }
 
-            print(f"[Worker {self.id}] Done request {request.get('id')} in {latency:.3f}s")
-
+            print(f"[Worker {self.id}] Done request {req_id} in {latency:.3f}s")
             return response
 
+        except Exception as e:
+            return {
+                "id": getattr(request, 'id', None) or (request.get('id') if isinstance(request, dict) else "Unknown"),
+                "worker_id": self.id,
+                "result": "",
+                "latency": time.time() - start_time,
+                "status": "failed",
+                "error": str(e)
+            }
+
         finally:
-            # 🔒 Decrement active requests even if error happens
             with self.lock:
                 self.active_requests -= 1
 
-    # ---------------------------
-    # 🔹 RAG (stub)
-    # ---------------------------
+  
     def retrieve_context(self, query):
-        # simulate retrieval delay
-        time.sleep(random.uniform(0.01, 0.05))
-        return f"Context for: {query}"
+        docs = retriever.invoke(query)
+        return "\n\n".join(doc.page_content for doc in docs)
 
-    # ---------------------------
-    # 🔹 LLM (stub for now)
-    # ---------------------------
+ 
     def run_llm(self, query, context):
-        # simulate heavy computation
-        time.sleep(random.uniform(0.1, 0.3))
-        return f"Answer to '{query}' using [{context}]"
+        formatted_prompt = prompt.format(context=context, question=query)
+        response = llm.invoke(formatted_prompt)
+        return response.content
