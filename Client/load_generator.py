@@ -3,7 +3,7 @@
 import time
 import threading
 import statistics
-from common.models import Request
+from Common.models import Request
 
 
 class LoadTestResult:
