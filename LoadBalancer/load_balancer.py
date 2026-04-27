@@ -18,5 +18,5 @@ class LoadBalancer:
             try:
                 return worker.process(request)
             except Exception:
-                print(f"Worker {worker.id} failed, trying next...")
+                print(f"Request: {request.id} Worker {worker.id} failed, trying next...")
         raise Exception("All workers failed")
