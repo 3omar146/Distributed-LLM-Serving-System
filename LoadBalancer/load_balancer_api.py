@@ -21,9 +21,11 @@ class LoadBalancer:
         for _ in range(len(self.workers)):
             w = self.get_next()
             try:
-                res = requests.post(f"{w}/process", json=request, timeout=10)
+                res = requests.post(f"{w}/process", json=request, timeout=120)
                 return res.json()
-            except Exception:
+            except Exception as e:
+                # 🔹 ADD THIS PRINT STATEMENT
+                print(f"[LoadBalancer] Network Error calling {w}: {e}")
                 continue
 
         raise Exception("All workers failed")

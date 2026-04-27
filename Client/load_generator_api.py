@@ -3,7 +3,7 @@ import threading
 import statistics
 import requests
 
-from Common.models import Request
+from common.models import Request
 
 MASTER_URL = "http://localhost:7000"
 
@@ -40,7 +40,7 @@ def simulate_user(user_id, results):
         res = requests.post(
             f"{MASTER_URL}/handle",
             json=req.to_dict(),
-            timeout=20
+            timeout=120
         ).json()
 
         latency = time.time() - start
@@ -48,13 +48,18 @@ def simulate_user(user_id, results):
         if res.get("status") == "success":
             results.add_success(latency)
         else:
+            # 🔹 ADD THIS PRINT STATEMENT
+            error_msg = res.get("error", "No error message provided")
+            print(f"[Client] Request {user_id} FAILED | Worker Error: {error_msg}")
             results.add_failure()
 
-    except Exception:
+    except Exception as e:
+        # 🔹 ADD THIS PRINT STATEMENT
+        print(f"[Client] Request {user_id} CRASHED | Network Exception: {e}")
         results.add_failure()
 
 
-def run_load_test(num_users=100):
+def run_load_test(num_users=1000):
     results = LoadTestResult()
     threads = []
 

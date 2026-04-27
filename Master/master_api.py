@@ -5,7 +5,7 @@ import time
 app = FastAPI()
 
 LB_URL = "http://localhost:9000"
-MAX_RETRIES = 2
+MAX_RETRIES = 1
 
 
 @app.post("/handle")
@@ -14,7 +14,7 @@ def handle(request: dict):
 
     while attempt <= MAX_RETRIES:
         try:
-            res = requests.post(f"{LB_URL}/dispatch", json=request, timeout=15)
+            res = requests.post(f"{LB_URL}/dispatch", json=request, timeout=120)
             return res.json()
 
         except Exception as e:

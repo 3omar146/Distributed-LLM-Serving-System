@@ -3,14 +3,14 @@ import time
 import threading
 import os
 
-from Common.models import Response
-from RAG.model import retriever, llm, prompt
+from common.models import Response
+from rag.model import retriever, llm, prompt
 
 app = FastAPI()
 
 
 class Worker:
-    def __init__(self, worker_id, max_concurrent=2):
+    def __init__(self, worker_id, max_concurrent=20):
         self.id = worker_id
         self.lock = threading.Lock()
         self.active_requests = 0
@@ -28,6 +28,19 @@ class Worker:
         try:
             query = request["query"]
             req_id = request["id"]
+            time.sleep(0.5) 
+            result = f"Simulated response for: {query}"
+
+            latency = time.time() - start
+
+            return Response(
+                id=req_id,
+                result=result,
+                latency=latency,
+                status="success",
+                worker_id=self.id,
+                created_at=request.get("created_at")
+            ).to_dict()
 
             docs = retriever.invoke(query)
             context = "\n\n".join(doc.page_content for doc in docs)
@@ -60,7 +73,7 @@ class Worker:
             self.sem.release()
 
 
-worker = Worker(worker_id=int(os.getenv("WORKER_ID", 1)))
+worker = Worker(worker_id=int(os.getenv("WORKER_ID", 1)), max_concurrent=100)
 
 
 @app.post("/process")
