@@ -2,6 +2,7 @@ from fastapi import FastAPI
 import time
 import threading
 import os
+import random  # 🔥 added
 
 from common.models import Response
 from rag.model import retriever, llm, prompt
@@ -10,11 +11,14 @@ app = FastAPI()
 
 
 class Worker:
-    def __init__(self, worker_id, max_concurrent=20):
+    def __init__(self, worker_id, max_concurrent=2, fail_rate=0.1):
         self.id = worker_id
         self.lock = threading.Lock()
         self.active_requests = 0
         self.sem = threading.Semaphore(max_concurrent)
+
+        # 🔥 failure rate
+        self.fail_rate = fail_rate
 
     def process(self, request: dict):
         start = time.time()
@@ -26,6 +30,10 @@ class Worker:
             self.active_requests += 1
 
         try:
+            # 🔥 simulate random failure
+            if random.random() < self.fail_rate:
+                raise Exception("Simulated worker failure")
+
             query = request["query"]
             req_id = request["id"]
             time.sleep(0.5) 
@@ -73,7 +81,12 @@ class Worker:
             self.sem.release()
 
 
-worker = Worker(worker_id=int(os.getenv("WORKER_ID", 1)), max_concurrent=100)
+# 🔥 read from environment variables
+worker = Worker(
+    worker_id=int(os.getenv("WORKER_ID", 1)),
+    max_concurrent=int(os.getenv("MAX_CONCURRENT", 2)),
+    fail_rate=float(os.getenv("FAIL_RATE", 0.1))
+)
 
 
 @app.post("/process")
