@@ -53,7 +53,7 @@ def simulate_user(scheduler, user_id, results):
 
         # Supports both dict response and Response dataclass response
         if isinstance(response, dict):
-            response_id = response.get("id", user_id)
+            response_id = response.get("request_id", user_id)
             response_status = response.get("status", "success")
             response_error = response.get("error", None)
         else:
