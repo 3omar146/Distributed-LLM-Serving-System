@@ -13,5 +13,10 @@ class LoadBalancer:
         return worker
 
     def dispatch(self, request):
-        worker = self.get_next_worker()
-        return worker.process(request)
+        for _ in range(len(self.workers)): 
+            worker = self.get_next_worker()
+            try:
+                return worker.process(request)
+            except Exception:
+                print(f"Worker {worker.id} failed, trying next...")
+        raise Exception("All workers failed")
