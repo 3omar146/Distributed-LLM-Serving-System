@@ -15,7 +15,12 @@ def handle(request: dict):
     while attempt <= MAX_RETRIES:
         try:
             res = requests.post(f"{LB_URL}/dispatch", json=request, timeout=120)
-            return res.json()
+            data = res.json()
+            
+            if data.get("status") == "failed":
+                raise Exception(data.get("error"))
+                
+            return data
 
         except Exception as e:
             attempt += 1

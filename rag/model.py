@@ -11,8 +11,8 @@ from langchain_groq import ChatGroq
 
 print("Initializing Global RAG System...")
 
-gemini_key = "AIzaSyCnSTpdDQLD1MRH9j2yWF8nCqIeaoosRrs"
-GROQ_API_KEY="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"
+gemini_key = ""
+GROQ_API_KEY=""
 
 
 current_dir = os.path.dirname(__file__)

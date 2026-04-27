@@ -10,6 +10,8 @@ from rag.model import retriever, llm, prompt
 app = FastAPI()
 
 
+
+
 class Worker:
     def __init__(self, worker_id, max_concurrent=2, fail_rate=0.1):
         self.id = worker_id
@@ -79,6 +81,19 @@ class Worker:
             with self.lock:
                 self.active_requests -= 1
             self.sem.release()
+
+
+# 🔥 read from environment variables
+worker = Worker(
+    worker_id=int(os.getenv("WORKER_ID", 1)),
+    max_concurrent=int(os.getenv("MAX_CONCURRENT", 2)),
+    fail_rate=float(os.getenv("FAIL_RATE", 0.1))
+)
+
+
+@app.post("/process")
+def process(request: dict):
+    return worker.process(request)
 
 
 # 🔥 read from environment variables
