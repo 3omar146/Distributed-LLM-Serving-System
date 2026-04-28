@@ -22,6 +22,9 @@ class LoadBalancer:
             w = self.get_next()
             try:
                 res = requests.post(f"{w}/process", json=request, timeout=120)
+                if(res.status == "failed"):
+                    print(f"[LoadBalancer] Worker {w} failed to process request {request.get('id')}")
+                    continue
                 return res.json()
             except Exception as e:
                 # 🔹 ADD THIS PRINT STATEMENT

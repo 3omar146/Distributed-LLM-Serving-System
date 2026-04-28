@@ -3,7 +3,7 @@ import threading
 import statistics
 import requests
 
-from common.models import Request
+from Common.models import Request
 
 MASTER_URL = "http://localhost:7000"
 

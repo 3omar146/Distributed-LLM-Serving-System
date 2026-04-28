@@ -4,8 +4,8 @@ import threading
 import os
 import random  # 🔥 added
 
-from common.models import Response
-from rag.model import retriever, llm, prompt
+from Common.models import Response
+from RAG.model import retriever, llm, prompt
 
 app = FastAPI()
 
