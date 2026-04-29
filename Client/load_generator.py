@@ -1,9 +1,13 @@
-# client/load_generator.py
-
 import time
 import threading
 import statistics
-from common.models import Request
+import requests
+import os
+
+from Common.models import Request
+
+MASTER_URL = os.getenv("LB_URL", "http://LB:7000")
+RAMP_UP_RATE = int(os.getenv("RAMP_UP_RATE", 10))  # users per second
 
 
 class LoadTestResult:
@@ -12,7 +16,6 @@ class LoadTestResult:
         self.successful_requests = 0
         self.failed_requests = 0
         self.latencies = []
-        self.errors = []
         self.lock = threading.Lock()
 
     def add_success(self, latency):
@@ -21,139 +24,79 @@ class LoadTestResult:
             self.successful_requests += 1
             self.latencies.append(latency)
 
-    def add_failure(self, error):
+    def add_failure(self):
         with self.lock:
             self.total_requests += 1
             self.failed_requests += 1
-            self.errors.append(str(error))
 
 
-def simulate_user(scheduler, user_id, results):
-    """
-    Simulates one user sending one AI request.
-    """
-
-    request = Request(
+def simulate_user(user_id, results):
+    req = Request(
         id=user_id,
-        query=f"User {user_id}: Explain distributed LLM load balancing",
-        
-        # metadata={
-        #     "source": "client_load_generator",
-        #     "user_id": user_id
-        # }
+        query=f"User {user_id}: Explain distributed LLM load balancing"
     )
 
-    start_time = time.time()
+    start = time.time()
 
     try:
-        response = scheduler.handle_request(request)
+        res = requests.post(
+            f"{MASTER_URL}/handle",
+            json=req.to_dict(),
+            timeout=120
+        ).json()
 
-        end_time = time.time()
-        latency = end_time - start_time
+        latency = time.time() - start
 
-        # Supports both dict response and Response dataclass response
-        if isinstance(response, dict):
-            response_id = response.get("request_id", user_id)
-            response_status = response.get("status", "success")
-            response_error = response.get("error", None)
-        else:
-            response_id = response.id
-            response_status = response.status
-            response_error = response.error
-
-        if response_status == "success":
+        if res.get("status") == "success":
             results.add_success(latency)
-
-            print(
-                f"[Client] Request {response_id} completed "
-                f"| Latency: {latency:.3f}s"
-            )
+            print(f"[Client] Request {user_id} OK | "
+                  f"Latency: {latency:.3f}s | "
+                  f"Worker: {res.get('worker_id')}")
         else:
-            results.add_failure(response_error or "Unknown error")
-
-            print(
-                f"[Client] Request {response_id} failed "
-                f"| Error: {response_error}"
-            )
+            error_msg = res.get("error", "No error message")
+            print(f"[Client] Request {user_id} FAILED | Error: {error_msg}")
+            results.add_failure()
 
     except Exception as e:
-        results.add_failure(e)
-
-        print(
-            f"[Client] Request {user_id} failed "
-            f"| Error: {e}"
-        )
+        print(f"[Client] Request {user_id} CRASHED | {e}")
+        results.add_failure()
 
 
-def run_load_test(scheduler, num_users=1000):
-    """
-    Runs a load test using many concurrent users.
-    """
-
-    print("=" * 60)
-    print(f"Starting load test with {num_users} concurrent users")
-    print("=" * 60)
-
+def run_load_test(num_users=1000):
     results = LoadTestResult()
     threads = []
 
-    test_start_time = time.time()
+    start = time.time()
 
-    for user_id in range(num_users):
-        thread = threading.Thread(
-            target=simulate_user,
-            args=(scheduler, user_id, results)
-        )
+    for i in range(num_users):
+        t = threading.Thread(target=simulate_user, args=(i, results))
+        threads.append(t)
+        t.start()
 
-        threads.append(thread)
-        thread.start()
+        # ramp up gradually — don't slam everything at once
+        #time.sleep(1 / RAMP_UP_RATE)
 
-    for thread in threads:
-        thread.join()
+    for t in threads:
+        t.join()
 
-    test_end_time = time.time()
-    total_time = test_end_time - test_start_time
+    total = time.time() - start
 
-    print_final_report(results, total_time)
-
-    return results
-
-
-def print_final_report(results, total_time):
-    """
-    Prints final load test metrics.
-    """
-
-    print("\n" + "=" * 60)
-    print("LOAD TEST REPORT")
-    print("=" * 60)
-
-    print(f"Total requests:       {results.total_requests}")
-    print(f"Successful requests:  {results.successful_requests}")
-    print(f"Failed requests:      {results.failed_requests}")
-    print(f"Total test time:      {total_time:.3f}s")
-
-    if total_time > 0:
-        throughput = results.successful_requests / total_time
-    else:
-        throughput = 0
-
-    print(f"Throughput:           {throughput:.2f} requests/second")
+    print("\n===== LOAD TEST REPORT =====")
+    print(f"Total requests:      {results.total_requests}")
+    print(f"Successful:          {results.successful_requests}")
+    print(f"Failed:              {results.failed_requests}")
+    print(f"Duration:            {total:.2f}s")
+    print(f"Throughput:          {results.successful_requests / total:.2f} req/s")
 
     if results.latencies:
-        print(f"Average latency:      {statistics.mean(results.latencies):.3f}s")
-        print(f"Minimum latency:      {min(results.latencies):.3f}s")
-        print(f"Maximum latency:      {max(results.latencies):.3f}s")
+        print(f"Avg latency:         {statistics.mean(results.latencies):.3f}s")
+        print(f"Min latency:         {min(results.latencies):.3f}s")
+        print(f"Max latency:         {max(results.latencies):.3f}s")
+        print(f"Median latency:      {statistics.median(results.latencies):.3f}s")
 
-        if len(results.latencies) > 1:
-            print(f"Latency std dev:      {statistics.stdev(results.latencies):.3f}s")
 
-    if results.errors:
-        print("\nErrors:")
-        for error in results.errors[:10]:
-            print(f"- {error}")
-
-        if len(results.errors) > 10:
-            print(f"... and {len(results.errors) - 10} more errors")
-
-    print("=" * 60)
+if __name__ == "__main__":
+    num_users = int(os.getenv("NUM_USERS", 50))
+    print(f"Starting load test with {num_users} users "
+          f"at {RAMP_UP_RATE} users/sec ramp-up...")
+    run_load_test(num_users)

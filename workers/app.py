@@ -5,7 +5,7 @@ import os
 import random  # 🔥 added
 
 from Common.models import Response
-from RAG.model import retriever, llm, prompt
+from workers.rag.model import retriever, llm, prompt
 
 app = FastAPI()
 
