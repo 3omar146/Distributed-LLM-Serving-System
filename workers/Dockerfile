@@ -10,7 +10,13 @@ RUN apt-get update && apt-get install -y \
 COPY Common/ ./Common/
 
 COPY workers/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+
+# install CPU-only PyTorch first — prevents CUDA/NVIDIA downloads
+RUN pip install --no-cache-dir \
+    torch --index-url https://download.pytorch.org/whl/cpu
+
+# then install everything else
+RUN pip install --no-cache-dir --timeout=300 -r requirements.txt
 
 COPY workers/ .
 

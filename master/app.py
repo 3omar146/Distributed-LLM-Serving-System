@@ -9,7 +9,7 @@ app = FastAPI()
 # workers come from environment variable
 WORKER_URLS = os.getenv(
     "WORKER_URLS",
-    "http://worker1:8000,http://worker2:8000,http://worker3:8000"
+    "http://localhost:8001,http://localhost:8002,http://localhost:8003"
 ).split(",")
 
 MAX_RETRIES = int(os.getenv("MAX_RETRIES", 3))

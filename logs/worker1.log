@@ -1,0 +1,75 @@
+Traceback (most recent call last):
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\langchain_huggingface\embeddings\huggingface.py", line 68, in __init__
+    import sentence_transformers  # type: ignore[import]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\Scripts\uvicorn.exe\__main__.py", line 5, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\click\core.py", line 1514, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\click\core.py", line 1435, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\click\core.py", line 1298, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\click\core.py", line 853, in invoke
+    return callback(*args, **kwargs)
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\uvicorn\main.py", line 441, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<48 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\uvicorn\main.py", line 617, in run
+    server.run()
+    ~~~~~~~~~~^^
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\uvicorn\server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Program Files\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\uvicorn\server.py", line 79, in serve
+    await self._serve(sockets)
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\uvicorn\server.py", line 86, in _serve
+    config.load()
+    ~~~~~~~~~~~^^
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\uvicorn\config.py", line 449, in load
+    self.loaded_app = import_from_string(self.app)
+                      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\uvicorn\importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "C:\Program Files\Python313\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\~~~GAM3A~~~\Semester 6\dist\project\Distributed-LLM-Serving-System\workers\app.py", line 8, in <module>
+    from rag.model import retriever, llm, prompt
+  File "C:\~~~GAM3A~~~\Semester 6\dist\project\Distributed-LLM-Serving-System\workers\rag\model.py", line 27, in <module>
+    embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+  File "C:\Users\omard\AppData\Roaming\Python\Python313\site-packages\langchain_huggingface\embeddings\huggingface.py", line 74, in __init__
+    raise ImportError(msg) from exc
+ImportError: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+Initializing Global RAG System...

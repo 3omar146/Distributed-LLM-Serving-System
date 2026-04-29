@@ -1,0 +1,28 @@
+Starting load test with 20 users at 5 users/sec ramp-up...
+[Client] Request 0 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 6 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 2 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 3 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 1 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 7 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 4 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 5 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 8 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 9 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 10 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 11 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 12 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 13 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 14 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 15 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 16 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 17 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 18 CRASHED | Failed to parse: http://localhost:8000 /handle
+[Client] Request 19 CRASHED | Failed to parse: http://localhost:8000 /handle
+
+===== LOAD TEST REPORT =====
+Total requests:      20
+Successful:          0
+Failed:              20
+Duration:            0.01s
+Throughput:          0.00 req/s

@@ -4,9 +4,9 @@ import statistics
 import requests
 import os
 
-from Common.models import Request
+from common.models import Request
 
-MASTER_URL = os.getenv("LB_URL", "http://LB:7000")
+MASTER_URL = os.getenv("MASTER_URL", "http://localhost:8000")
 RAMP_UP_RATE = int(os.getenv("RAMP_UP_RATE", 10))  # users per second
 
 
