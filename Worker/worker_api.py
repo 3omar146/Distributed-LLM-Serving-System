@@ -107,3 +107,11 @@ worker = Worker(
 @app.post("/process")
 def process(request: dict):
     return worker.process(request)
+
+@app.get("/health")
+def health():
+    return {
+        "status": "ok",
+        "worker_id": worker.id,
+        "active_requests": worker.active_requests
+    }
