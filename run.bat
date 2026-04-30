@@ -11,10 +11,9 @@ for /f "usebackq eol=# tokens=1,* delims==" %%A in (".env") do (
     if "%%A"=="RAMP_UP_RATE" set "RAMP_UP_RATE=%%~B"
     if "%%A"=="MAX_RETRIES"  set "MAX_RETRIES=%%~B"
     if "%%A"=="FAIL_RATE"    set "FAIL_RATE=%%~B"
+    if "%%A"=="MAX_CONCURRENT" set "MAX_CONCURRENT=%%~B"
 )
 
-set FAIL_RATE=0.1
-set MAX_CONCURRENT=2
 
 echo Starting Worker 1 on port 8001...
 start "Worker 1" cmd /c "set PYTHONPATH=%CD%&&set PYTHONUNBUFFERED=1&&cd workers&&set WORKER_ID=1&&set GROQ_API_KEY=%GROQ_API_KEY%&&set HF_TOKEN=%HF_TOKEN%&&set FAIL_RATE=%FAIL_RATE%&&set MAX_CONCURRENT=%MAX_CONCURRENT%&&uvicorn app:app --host 0.0.0.0 --port 8001 > ../logs/worker1.log 2>&1"
@@ -25,7 +24,7 @@ start "Worker 2" cmd /c "set PYTHONPATH=%CD%&&set PYTHONUNBUFFERED=1&&cd workers
 echo Starting Worker 3 on port 8003...
 start "Worker 3" cmd /c "set PYTHONPATH=%CD%&&set PYTHONUNBUFFERED=1&&cd workers&&set WORKER_ID=3&&set GROQ_API_KEY=%GROQ_API_KEY%&&set HF_TOKEN=%HF_TOKEN%&&set FAIL_RATE=%FAIL_RATE%&&set MAX_CONCURRENT=%MAX_CONCURRENT%&&uvicorn app:app --host 0.0.0.0 --port 8003 > ../logs/worker3.log 2>&1"
 
-echo Waiting for workers to initialize (RAG setup takes ~30s)...
+echo Waiting for workers to initialize (RAG setup takes ~20s)...
 timeout /t 20 /nobreak
 
 echo Starting Master on port 8000...

@@ -1,0 +1,21 @@
+cd workers
+set WORKER_ID=1
+set PYTHONPATH=..
+uvicorn app:app --host 0.0.0.0 --port 8001
+
+cd workers
+set WORKER_ID=2
+set PYTHONPATH=..
+uvicorn app:app --host 0.0.0.0 --port 8002
+
+cd workers
+set WORKER_ID=3
+set PYTHONPATH=..
+uvicorn app:app --host 0.0.0.0 --port 8003
+
+cd master
+set WORKER_URLS=http://localhost:8001,http://localhost:8002,http://localhost:8003
+uvicorn app:app --host 0.0.0.0 --port 8000
+
+set PYTHONPATH=.
+python client\load_generator.py

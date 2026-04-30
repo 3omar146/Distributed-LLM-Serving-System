@@ -2,7 +2,8 @@ import os
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
-from langchain_huggingface import HuggingFaceEmbeddings
+#from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 
@@ -24,7 +25,8 @@ splits = text_splitter.split_documents(docs)
 # CHANGED: was HuggingFaceEmbeddings() which needs PyTorch locally
 # now uses HuggingFace API — no local model, no PyTorch, no NVIDIA
 # replace with this
-embedding_model = HuggingFaceEmbeddings(
+embedding_model = HuggingFaceEndpointEmbeddings(
+    huggingfacehub_api_token=HF_TOKEN,
     model="sentence-transformers/all-MiniLM-L6-v2"
 )
 vectorstore = FAISS.from_documents(documents=splits, embedding=embedding_model)

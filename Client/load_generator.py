@@ -7,7 +7,7 @@ import os
 from common.models import Request
 
 MASTER_URL = os.getenv("MASTER_URL", "http://localhost:8000").strip()
-RAMP_UP_RATE = int(os.getenv("RAMP_UP_RATE", 100))  # users per second
+RAMP_UP_RATE = int(os.getenv("RAMP_UP_RATE", 10))
 
 
 class LoadTestResult:
@@ -33,7 +33,7 @@ class LoadTestResult:
 def simulate_user(user_id, results):
     req = Request(
         id=user_id,
-        query=f"User {user_id}: Explain distributed LLM load balancing"
+        query=f"User {user_id}: Who has the most goal in the champions league history?",
     )
 
     start = time.time()
@@ -51,7 +51,9 @@ def simulate_user(user_id, results):
             results.add_success(latency)
             print(f"[Client] Request {user_id} OK | "
                   f"Latency: {latency:.3f}s | "
-                  f"Worker: {res.get('worker_id')}")
+                  f"Worker: {res.get('worker_id')}|"
+                  f"Query: {req.query} | "
+                  f" Result: {res.get('result')}")
         else:
             error_msg = res.get("error", "No error message")
             print(f"[Client] Request {user_id} FAILED | Error: {error_msg}")
@@ -60,6 +62,15 @@ def simulate_user(user_id, results):
     except Exception as e:
         print(f"[Client] Request {user_id} CRASHED | {e}")
         results.add_failure()
+
+
+def fetch_master_analytics():
+    try:
+        res = requests.get(f"{MASTER_URL}/analytics", timeout=5)
+        return res.json()
+    except Exception as e:
+        print(f"[Client] Could not fetch master analytics: {e}")
+        return None
 
 
 def run_load_test(num_users=1000):
@@ -72,7 +83,6 @@ def run_load_test(num_users=1000):
         t = threading.Thread(target=simulate_user, args=(i, results))
         threads.append(t)
         t.start()
-
         time.sleep(1 / RAMP_UP_RATE)
 
     for t in threads:
@@ -80,7 +90,8 @@ def run_load_test(num_users=1000):
 
     total = time.time() - start
 
-    print("\n===== LOAD TEST REPORT =====")
+    # client side report
+    print("\n===== LOAD TEST REPORT (CLIENT SIDE) =====")
     print(f"Total requests:      {results.total_requests}")
     print(f"Successful:          {results.successful_requests}")
     print(f"Failed:              {results.failed_requests}")
@@ -92,6 +103,24 @@ def run_load_test(num_users=1000):
         print(f"Min latency:         {min(results.latencies):.3f}s")
         print(f"Max latency:         {max(results.latencies):.3f}s")
         print(f"Median latency:      {statistics.median(results.latencies):.3f}s")
+
+    # master side analytics
+    analytics = fetch_master_analytics()
+    if analytics:
+        print("\n===== MASTER ANALYTICS (SERVER SIDE) =====")
+        print(f"Total received:      {analytics.get('total_requests')}")
+        print(f"Successful:          {analytics.get('successful_requests')}")
+        print(f"Failed:              {analytics.get('failed_requests')}")
+        print(f"Success rate:        {analytics.get('success_rate')}")
+
+        print("\n--- Requests per worker ---")
+        for worker, count in analytics.get("requests_per_worker", {}).items():
+            successes = analytics.get("successes_per_worker", {}).get(worker, 0)
+            failures  = analytics.get("failures_per_worker", {}).get(worker, 0)
+            print(f"  {worker}")
+            print(f"    Sent:      {count}")
+            print(f"    Success:   {successes}")
+            print(f"    Failed:    {failures}")
 
 
 if __name__ == "__main__":

@@ -7,16 +7,24 @@ import threading
 
 app = FastAPI()
 
-# workers come from environment variable
 WORKER_URLS = os.getenv(
     "WORKER_URLS",
-    "http://localhost:8001,http://localhost:8002,http://localhost:8003"
+    "http://localhost:8001"
 ).split(",")
 
 MAX_RETRIES = int(os.getenv("MAX_RETRIES", 5))
 
-index = 0
 lock = threading.Lock()
+
+# analytics tracking
+analytics = {
+    "total_requests": 0,
+    "successful_requests": 0,
+    "failed_requests": 0,
+    "requests_per_worker": {url: 0 for url in WORKER_URLS},
+    "successes_per_worker": {url: 0 for url in WORKER_URLS},
+    "failures_per_worker": {url: 0 for url in WORKER_URLS},
+}
 
 
 def get_worker_loads():
@@ -35,10 +43,8 @@ def get_worker_loads():
 
 def get_best_worker():
     loads = get_worker_loads()
-
     if not loads:
-        return None  # all workers dead
-
+        return None
     min_load = min(loads.values())
     candidates = [url for url, load in loads.items() if load == min_load]
     return random.choice(candidates)
@@ -47,13 +53,18 @@ def get_best_worker():
 @app.post("/handle")
 def handle(request: dict):
     attempt = 0
-
     print(f"[Master] Received request {request.get('id')}")
+
+    # count total requests
+    with lock:
+        analytics["total_requests"] += 1
 
     while attempt <= MAX_RETRIES:
         worker_url = get_best_worker()
 
         if not worker_url:
+            with lock:
+                analytics["failed_requests"] += 1
             return {
                 "id": request.get("id"),
                 "status": "failed",
@@ -62,6 +73,11 @@ def handle(request: dict):
 
         try:
             print(f"[Master] Sending request {request.get('id')} to {worker_url} (attempt {attempt + 1})")
+
+            # count request sent to this worker
+            with lock:
+                analytics["requests_per_worker"][worker_url] += 1
+
             res = requests.post(
                 f"{worker_url}/process",
                 json=request,
@@ -72,6 +88,11 @@ def handle(request: dict):
             if data.get("status") == "failed":
                 raise Exception(data.get("error", "Worker failed"))
 
+            # count success
+            with lock:
+                analytics["successful_requests"] += 1
+                analytics["successes_per_worker"][worker_url] += 1
+
             return data
 
         except Exception as e:
@@ -79,14 +100,20 @@ def handle(request: dict):
             print(f"[Master] Request {request.get('id')} "
                   f"attempt {attempt} failed on {worker_url}: {e}")
 
+            # count failure for this worker
+            with lock:
+                analytics["failures_per_worker"][worker_url] += 1
+
             if attempt > MAX_RETRIES:
+                with lock:
+                    analytics["failed_requests"] += 1
                 return {
                     "id": request.get("id"),
                     "status": "failed",
                     "error": f"All {MAX_RETRIES} retries exhausted: {str(e)}"
                 }
 
-            time.sleep(0.5 * attempt)
+            time.sleep(attempt)
 
 
 @app.get("/health")
@@ -98,3 +125,34 @@ def health():
         "healthy_workers": len(worker_loads),
         "worker_loads": worker_loads
     }
+
+
+@app.get("/analytics")
+def get_analytics():
+    with lock:
+        total = analytics["total_requests"]
+        success_rate = (
+            round(analytics["successful_requests"] / total * 100, 2)
+            if total > 0 else 0
+        )
+        return {
+            "total_requests":       analytics["total_requests"],
+            "successful_requests":  analytics["successful_requests"],
+            "failed_requests":      analytics["failed_requests"],
+            "success_rate":         f"{success_rate}%",
+            "requests_per_worker":  analytics["requests_per_worker"],
+            "successes_per_worker": analytics["successes_per_worker"],
+            "failures_per_worker":  analytics["failures_per_worker"],
+        }
+
+
+@app.delete("/analytics/reset")
+def reset_analytics():
+    with lock:
+        analytics["total_requests"] = 0
+        analytics["successful_requests"] = 0
+        analytics["failed_requests"] = 0
+        analytics["requests_per_worker"] = {url: 0 for url in WORKER_URLS}
+        analytics["successes_per_worker"] = {url: 0 for url in WORKER_URLS}
+        analytics["failures_per_worker"] = {url: 0 for url in WORKER_URLS}
+    return {"status": "analytics reset"}
