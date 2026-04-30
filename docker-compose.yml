@@ -16,7 +16,7 @@ services:
   master1:
     build:
       context: .
-      dockerfile: master/Dockerfile
+      dockerfile: Master/Dockerfile
     environment:
       - WORKER_URLS=http://worker1:8000,http://worker2:8000,http://worker3:8000
       - MAX_RETRIES=3
@@ -38,7 +38,7 @@ services:
   master2:
     build:
       context: .
-      dockerfile: master/Dockerfile
+      dockerfile: Master/Dockerfile
     environment:
       - WORKER_URLS=http://worker1:8000,http://worker2:8000,http://worker3:8000
       - MAX_RETRIES=3
@@ -66,7 +66,7 @@ services:
       - MAX_CONCURRENT=2
       - HF_TOKEN=${HF_TOKEN}
       - FAIL_RATE=0.1
-      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_API_KEYS=${GROQ_API_KEYS}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
@@ -84,7 +84,7 @@ services:
       - MAX_CONCURRENT=2
       - HF_TOKEN=${HF_TOKEN}
       - FAIL_RATE=0.1
-      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_API_KEYS=${GROQ_API_KEYS}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
@@ -102,7 +102,7 @@ services:
       - MAX_CONCURRENT=2
       - HF_TOKEN=${HF_TOKEN}
       - FAIL_RATE=0.1
-      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_API_KEYS=${GROQ_API_KEYS}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
@@ -114,7 +114,7 @@ services:
   client:
     build:
       context: .
-      dockerfile: client/Dockerfile
+      dockerfile: Client/Dockerfile
     environment:
       - MASTER_URL=http://nginx:80
       - NUM_USERS=${NUM_USERS:-50}

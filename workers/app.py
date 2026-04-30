@@ -6,7 +6,7 @@ import os
 import random
 
 from common.models import Response
-from rag.model import retriever, llm, prompt
+from rag.model import retriever, invoke_llm, prompt
 
 app = FastAPI()
 
@@ -41,7 +41,7 @@ class Worker:
             context = "\n\n".join(doc.page_content for doc in docs)
 
             formatted = prompt.format(context=context, question=query)
-            result = llm.invoke(formatted).content
+            result = invoke_llm(formatted)
 
             print(f"[Worker {self.id}] Result for request {req_id}: {result}")
 

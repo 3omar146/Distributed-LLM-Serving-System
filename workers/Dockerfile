@@ -11,8 +11,8 @@ COPY common/ ./common/
 
 COPY workers/requirements.txt .
 
-RUN pip install --no-cache-dir \
-    torch --index-url https://download.pytorch.org/whl/cpu
+# RUN pip install --no-cache-dir \
+#     torch --index-url https://download.pytorch.org/whl/cpu
 
 RUN pip install --no-cache-dir --timeout=300 -r requirements.txt
 
