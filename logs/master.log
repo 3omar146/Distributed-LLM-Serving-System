@@ -2,3 +2,1762 @@ INFO:     Started server process [19524]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49730 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49733 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49736 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49739 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49742 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49745 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49748 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49751 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49754 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49757 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49760 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49764 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49768 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49772 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49777 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49781 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49785 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49789 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64245 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64248 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64251 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64254 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64257 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64260 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64263 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64266 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64269 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64272 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64275 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64279 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64283 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64287 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64291 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60636 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60640 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60645 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60649 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60654 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60659 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60663 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60668 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60674 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60678 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60684 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60689 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60695 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60698 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60703 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60710 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60718 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60721 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60727 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60735 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60741 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60748 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60753 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60760 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60765 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60768 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60774 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60780 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60782 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60788 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60794 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60798 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60803 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60807 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62898 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62901 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62904 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62907 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62910 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62913 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62916 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62919 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62922 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62925 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62928 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62932 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62936 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62941 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62944 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62949 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62952 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62957 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62960 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62964 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62968 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62974 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62978 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62985 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62988 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62994 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62998 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63005 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63010 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63014 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63019 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63028 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63031 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63038 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63043 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63050 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63058 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63062 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63067 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63073 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63079 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63083 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63090 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63093 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63098 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63103 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63108 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63113 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63118 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63124 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 10 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 11 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 12 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 16 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 18 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 19 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61672 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61675 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 23 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 24 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 25 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 26 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 27 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 28 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 29 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 30 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 31 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 32 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 2 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61764 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61769 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 38 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 10 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51158 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51165 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 13 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 16 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61714 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61707 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64318 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61743 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 26 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 27 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 28 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:61775 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 30 attempt 2 failed on http://localhost:8002: Simulated worker failure
+INFO:     127.0.0.1:61782 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56920 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:59453 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 36 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 6 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 7 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 10 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 16 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 19 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 3 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64270 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 27 attempt 3 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 29 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61678 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 3 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61681 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 4 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61684 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 6 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61690 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 7 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61693 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 8 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61696 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61699 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 10 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61702 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61718 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 14 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61723 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61728 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 16 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61732 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 17 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61737 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61810 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 5 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5856, Requested 494. Please try again in 3.5s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 20 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61753 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61789 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61796 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 27 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61803 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 44 attempt 1 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5663, Requested 494. Please try again in 1.57s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 42 attempt 1 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5668, Requested 494. Please try again in 1.62s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 43 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 36 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:64282 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 3 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:62483 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 39 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:64311 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64323 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 5 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:61687 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64290 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 29 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5885, Requested 494. Please try again in 3.789999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:62476 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64337 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5827, Requested 494. Please try again in 3.21s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:61747 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:64382 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:64387 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64362 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 38 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5877, Requested 494. Please try again in 3.71s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:64300 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 3 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:64344 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5831, Requested 494. Please try again in 3.25s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:64353 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64330 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 47 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5790, Requested 494. Please try again in 2.84s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:64371 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 1 attempt 1 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 10 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 11 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 12 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 16 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51071 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51077 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 20 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 23 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 24 attempt 1 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51143 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51148 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 26 attempt 1 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51160 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 28 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 29 attempt 1 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51202 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 1 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51167 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51223 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 34 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51239 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 35 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51247 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 6 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 2 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51074 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51083 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51284 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 11 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 12 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 40 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 16 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 23 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51095 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 3 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 11 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 12 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 40 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 16 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 23 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 3 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51098 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 10 attempt 2 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5870, Requested 494. Please try again in 3.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5856, Requested 494. Please try again in 3.5s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 28 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51089 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 7 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51092 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51080 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 11 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51107 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 38 attempt 2 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5889, Requested 494. Please try again in 3.83s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 12 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51112 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 13 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51117 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 14 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51123 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 15 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51129 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51138 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51153 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 23 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51174 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51181 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 10 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51188 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51197 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51209 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 29 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51217 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51231 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51255 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 35 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51266 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 36 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51276 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51364 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51311 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51324 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51331 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 44 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51343 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 39 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51346 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51086 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5894, Requested 494. Please try again in 3.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 46 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51355 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 10 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51104 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 16 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5877, Requested 494. Please try again in 3.71s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:51133 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51385 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51293 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51302 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5875, Requested 494. Please try again in 3.69s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:51375 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51318 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 10 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 11 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 12 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 5 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 6 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 10 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 11 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 10 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52254 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 11 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 12 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52257 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52284 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 17 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 18 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 19 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52314 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 23 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 24 attempt 1 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52309 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 26 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 27 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 28 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 29 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 30 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 31 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 32 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 2 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52341 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52348 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 4 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52430 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 40 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52438 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 9 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52474 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52278 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52289 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52294 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 18 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 19 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 2 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52519 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 27 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 28 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 30 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 31 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 32 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 40 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52319 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 14 attempt 2 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5874, Requested 494. Please try again in 3.679999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 20 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52260 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52263 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52355 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 2 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5887, Requested 494. Please try again in 3.81s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 4 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52266 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 5 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52269 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 6 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52272 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52275 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52281 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 13 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52300 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52362 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52335 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 27 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52383 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 28 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52392 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 19 attempt 3 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5872, Requested 494. Please try again in 3.66s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 29 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52397 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 18 attempt 3 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5865, Requested 494. Please try again in 3.59s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 30 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52404 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 32 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52422 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52447 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 36 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52456 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 37 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52465 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52482 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52490 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52500 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52506 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52514 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52304 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52540 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52330 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 18 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52324 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52557 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:52563 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:52370 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52548 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5861, Requested 494. Please try again in 3.55s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:52413 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5852, Requested 494. Please try again in 3.46s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:52376 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52530 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53132 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53135 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:53144 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53147 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53150 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53153 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53156 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53159 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53162 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53168 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53173 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 15 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53177 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 17 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 18 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 19 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 23 attempt 1 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53229 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 24 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 27 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 28 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 29 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 30 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 31 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 32 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 35 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 40 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53219 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 17 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 18 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 1 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5943, Requested 494. Please try again in 4.37s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 20 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 16 attempt 1 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5885, Requested 494. Please try again in 3.789999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 24 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 30 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 31 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 32 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 33 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 34 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 35 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 36 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 37 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 2 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 38 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 40 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53248 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 15 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 18 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 16 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 26 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 27 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 29 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 30 attempt 3 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53270 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 2 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5968, Requested 494. Please try again in 4.62s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 32 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 23 attempt 2 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5891, Requested 494. Please try again in 3.849999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 36 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53138 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 42 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 43 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 14 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 15 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53187 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 16 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 17 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53197 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 18 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53202 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53329 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 20 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5940, Requested 494. Please try again in 4.34s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 26 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53256 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 27 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53263 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53277 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 32 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53302 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 23 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 33 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53310 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 34 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53318 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 36 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53337 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 37 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53346 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 38 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53352 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 39 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53361 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53370 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53374 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53382 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53285 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53392 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 44 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53395 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53406 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 3 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5910, Requested 494. Please try again in 4.04s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 3 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5899, Requested 494. Please try again in 3.93s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:53141 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 47 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53422 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53429 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53436 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 14 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53182 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:53207 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53244 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:53293 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53192 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5946, Requested 494. Please try again in 4.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:53413 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 20 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5922, Requested 494. Please try again in 4.16s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:53211 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53235 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 0 attempt 1 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57625 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57628 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 8 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57640 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57643 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57541 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 13 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57544 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57547 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57553 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 17 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57557 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57560 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57566 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 23 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57579 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 24 attempt 1 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 26 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57582 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 42 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 43 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 5 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 8 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 13 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 17 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 19 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 20 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 24 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57597 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 36 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 0 attempt 2 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5938, Requested 494. Please try again in 4.319999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:57587 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 20 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 40 attempt 1 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5903, Requested 494. Please try again in 3.969999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 24 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 3 failed on http://localhost:8002: Simulated worker failure
+INFO:     127.0.0.1:57651 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57631 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 4 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57634 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 5 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57637 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 8 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57646 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 9 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57538 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 0 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 13 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57550 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57569 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 20 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57572 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 24 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57592 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57602 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 27 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57607 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 28 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57613 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 29 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57618 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 30 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57623 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57629 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 32 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57636 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 33 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57641 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 34 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57647 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57563 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 37 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57659 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 38 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5956, Requested 494. Please try again in 4.5s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 39 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5933, Requested 494. Please try again in 4.27s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 44 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:57694 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:57698 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:57704 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 47 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:57709 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:57713 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:57719 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 0 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:57622 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57679 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 39 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:57669 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57664 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 36 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5891, Requested 494. Please try again in 3.849999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:57655 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5888, Requested 494. Please try again in 3.82s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:57689 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5885, Requested 494. Please try again in 3.789999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:57682 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57673 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64939 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64942 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 7 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 10 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 11 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 12 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64954 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64957 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 15 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64978 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64981 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 17 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:64987 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 20 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64993 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64996 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 22 attempt 1 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 24 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65015 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:65006 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 29 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65036 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65041 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 7 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 42 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 8 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 43 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 10 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 11 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 12 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 15 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 17 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 20 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 24 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65090 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 35 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 1 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5907, Requested 494. Please try again in 4.01s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 3 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 42 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 43 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 7 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 8 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 10 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 11 attempt 3 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:65084 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 12 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 15 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 22 attempt 2 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5931, Requested 494. Please try again in 4.25s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 49 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 41 attempt 1 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5916, Requested 494. Please try again in 4.099999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 20 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 26 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 38 attempt 3 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65024 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5919, Requested 494. Please try again in 4.13s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 43 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64948 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64951 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 47 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64959 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64963 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 9 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64966 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 10 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:64969 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 22 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 11 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:64972 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 12 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:64975 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 15 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:64984 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 20 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:64998 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65029 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 30 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65044 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65052 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 32 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65057 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 33 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65060 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65133 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 34 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65065 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 17 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5960, Requested 494. Please try again in 4.539999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 35 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65069 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 36 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65074 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 37 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65076 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 38 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65081 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 24 attempt 3 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5888, Requested 494. Please try again in 3.82s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 2 attempt 4 failed on http://localhost:8002: Simulated worker failure
+INFO:     127.0.0.1:64944 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:65116 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:65118 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 47 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:65125 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:65128 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65101 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 22 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:65010 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 24 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65021 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65110 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 43 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5908, Requested 494. Please try again in 4.02s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:65103 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:65094 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64990 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 30 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5901, Requested 494. Please try again in 3.949999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:65049 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51836 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 6 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51839 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 8 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51857 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 10 attempt 1 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 11 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:51851 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 14 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51872 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 15 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:51875 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 18 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51884 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51887 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 20 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:51892 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 23 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51902 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 24 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:51906 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 27 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51921 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 29 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51928 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 42 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 6 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 43 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 8 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 10 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 11 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 14 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 15 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 18 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 20 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 24 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:51986 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 35 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 1 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5915, Requested 494. Please try again in 4.09s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 43 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 2 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 6 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 8 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 10 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 11 attempt 3 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:51983 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 14 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 15 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 23 attempt 2 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5924, Requested 494. Please try again in 4.179999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 41 attempt 1 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5919, Requested 494. Please try again in 4.13s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 20 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 29 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 38 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 42 attempt 2 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5937, Requested 494. Please try again in 4.31s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 43 attempt 3 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 45 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 6 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 41 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 8 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 23 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 11 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 14 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 15 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 20 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 28 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 3 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5950, Requested 494. Please try again in 4.439999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 36 attempt 4 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 18 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5937, Requested 494. Please try again in 4.31s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 38 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 41 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 3 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5961, Requested 494. Please try again in 4.55s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 23 attempt 4 failed on http://localhost:8002: Capacity full
+[Master] Request 24 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 18 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5907, Requested 494. Please try again in 4.01s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 49 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5917, Requested 494. Please try again in 4.11s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 28 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5910, Requested 494. Please try again in 4.04s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 2 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60295 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60298 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 7 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60310 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60313 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 11 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60320 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60326 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 14 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60332 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 16 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60335 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60341 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 19 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60347 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60350 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 21 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:60356 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 24 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60365 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 2 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 43 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 7 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 11 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 14 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 16 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 19 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 21 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 24 attempt 2 failed on http://localhost:8001: Simulated worker failure
+[Master] Request 26 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60370 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 33 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 7 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 48 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 9 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 49 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 11 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 14 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 40 attempt 1 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5935, Requested 494. Please try again in 4.29s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:60414 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 1 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5910, Requested 494. Please try again in 4.04s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 19 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 2 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5891, Requested 494. Please try again in 3.849999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 24 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 38 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 39 attempt 3 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60431 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 43 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 44 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 45 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 46 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 47 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 2 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60301 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 3 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60304 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60307 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 7 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60316 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60323 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 11 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60329 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 14 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60338 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 19 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60353 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 24 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60376 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60386 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 27 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60391 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 28 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60396 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 29 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60401 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 30 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60406 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60411 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 33 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60417 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 35 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5974, Requested 494. Please try again in 4.68s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:60343 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 37 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60435 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 38 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:60437 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 21 attempt 3 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5925, Requested 494. Please try again in 4.189999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 43 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60460 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 44 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60469 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60472 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 46 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60478 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 47 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60482 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60487 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60494 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60443 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 2 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5919, Requested 494. Please try again in 4.13s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 21 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60361 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60457 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 34 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5919, Requested 494. Please try again in 4.13s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:60423 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 40 attempt 3 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:60382 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 35 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5942, Requested 494. Please try again in 4.36s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:60425 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60446 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 4 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5870, Requested 494. Please try again in 3.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:60451 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 2 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 3 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 4 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56797 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56795 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56810 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 8 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56813 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 9 attempt 1 failed on http://localhost:8001: Simulated worker failure
+INFO:     127.0.0.1:56816 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 12 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56825 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 14 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56828 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56834 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 17 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56840 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56843 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56849 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56851 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 22 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 23 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 1 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 1 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56855 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 42 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 2 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 43 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 8 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 12 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 1 failed on http://localhost:8002: Capacity full
+[Master] Request 14 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 17 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 23 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 24 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 2 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56944 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 35 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 21 attempt 1 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5905, Requested 494. Please try again in 3.99s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 43 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 44 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 2 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 45 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 8 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 49 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 9 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 14 attempt 3 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56831 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 1 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5922, Requested 494. Please try again in 4.16s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 22 attempt 2 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5919, Requested 494. Please try again in 4.13s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 24 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 25 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 26 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 27 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 28 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 30 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 31 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 32 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 33 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 34 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 21 attempt 2 failed on http://localhost:8001: Capacity full
+[Master] Request 35 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 36 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 37 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 38 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 39 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 42 attempt 2 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5980, Requested 494. Please try again in 4.74s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:56846 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 45 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 46 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 47 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 2 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56801 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 48 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 3 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56804 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 4 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56807 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 2 failed on http://localhost:8002: Capacity full
+[Master] Request 8 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56819 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 9 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56822 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 22 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 14 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56837 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 25 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56880 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 26 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56885 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 27 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56891 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 28 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56896 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 30 attempt 4 failed on http://localhost:8001: Capacity full
+[Master] Request 21 attempt 3 failed on http://localhost:8001: Capacity full
+[Master] Request 29 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56904 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56901 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 31 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56909 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 32 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56912 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 33 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56916 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 34 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56921 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 35 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56924 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56959 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 36 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56930 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 37 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56932 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 38 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56936 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 39 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56942 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 23 attempt 3 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5901, Requested 494. Please try again in 3.949999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 46 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56978 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 47 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56979 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 41 attempt 3 failed on http://localhost:8002: Capacity full
+[Master] Request 48 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56985 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 49 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56991 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56970 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 22 attempt 4 failed on http://localhost:8001: Capacity full
+INFO:     127.0.0.1:56866 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 44 attempt 3 failed on http://localhost:8002: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5909, Requested 494. Please try again in 4.03s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+[Master] Request 24 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5906, Requested 494. Please try again in 4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:56876 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56955 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 44 attempt 4 failed on http://localhost:8002: Capacity full
+INFO:     127.0.0.1:56968 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56871 - "POST /handle HTTP/1.1" 200 OK
+[Master] Request 21 attempt 4 failed on http://localhost:8001: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kmq8q3ktehka9h501r76476g` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5888, Requested 494. Please try again in 3.82s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+INFO:     127.0.0.1:56862 - "POST /handle HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56950 - "POST /handle HTTP/1.1" 200 OK

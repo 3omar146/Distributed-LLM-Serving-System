@@ -6,8 +6,8 @@ import os
 
 from common.models import Request
 
-MASTER_URL = os.getenv("MASTER_URL", "http://localhost:8000")
-RAMP_UP_RATE = int(os.getenv("RAMP_UP_RATE", 10))  # users per second
+MASTER_URL = os.getenv("MASTER_URL", "http://localhost:8000").strip()
+RAMP_UP_RATE = int(os.getenv("RAMP_UP_RATE", 100))  # users per second
 
 
 class LoadTestResult:
@@ -73,8 +73,7 @@ def run_load_test(num_users=1000):
         threads.append(t)
         t.start()
 
-        # ramp up gradually — don't slam everything at once
-        #time.sleep(1 / RAMP_UP_RATE)
+        time.sleep(1 / RAMP_UP_RATE)
 
     for t in threads:
         t.join()

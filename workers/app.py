@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import time
 import threading
 import os
-import random  # 🔥 added
+import random
 
 from common.models import Response
 from rag.model import retriever, llm, prompt
@@ -10,16 +10,12 @@ from rag.model import retriever, llm, prompt
 app = FastAPI()
 
 
-
-
 class Worker:
-    def __init__(self, worker_id, max_concurrent=2, fail_rate=0.1):
+    def __init__(self, worker_id, max_concurrent=5, fail_rate=0):
         self.id = worker_id
         self.lock = threading.Lock()
         self.active_requests = 0
         self.sem = threading.Semaphore(max_concurrent)
-
-        # 🔥 failure rate
         self.fail_rate = fail_rate
 
     def process(self, request: dict):
@@ -32,25 +28,11 @@ class Worker:
             self.active_requests += 1
 
         try:
-            # 🔥 simulate random failure
             if random.random() < self.fail_rate:
                 raise Exception("Simulated worker failure")
 
             query = request["query"]
             req_id = request["id"]
-            time.sleep(0.5) 
-            result = f"Simulated response for: {query}"
-
-            latency = time.time() - start
-
-            return Response(
-                id=req_id,
-                result=result,
-                latency=latency,
-                status="success",
-                worker_id=self.id,
-                created_at=request.get("created_at")
-            ).to_dict()
 
             docs = retriever.invoke(query)
             context = "\n\n".join(doc.page_content for doc in docs)
@@ -83,7 +65,6 @@ class Worker:
             self.sem.release()
 
 
-# 🔥 read from environment variables
 worker = Worker(
     worker_id=int(os.getenv("WORKER_ID", 1)),
     max_concurrent=int(os.getenv("MAX_CONCURRENT", 2)),
@@ -93,20 +74,16 @@ worker = Worker(
 
 @app.post("/process")
 def process(request: dict):
-    return worker.process(request)
+    try:
+        return worker.process(request)
+    except Exception as e:
+        return Response(
+            id=request.get("id"),
+            status="failed",
+            error=str(e),
+            worker_id=worker.id
+        ).to_dict()
 
-
-# 🔥 read from environment variables
-worker = Worker(
-    worker_id=int(os.getenv("WORKER_ID", 1)),
-    max_concurrent=int(os.getenv("MAX_CONCURRENT", 2)),
-    fail_rate=float(os.getenv("FAIL_RATE", 0.1))
-)
-
-
-@app.post("/process")
-def process(request: dict):
-    return worker.process(request)
 
 @app.get("/health")
 def health():
