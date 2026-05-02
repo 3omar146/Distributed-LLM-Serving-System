@@ -42,7 +42,7 @@ def simulate_user(user_id, results):
         res = requests.post(
             f"{MASTER_URL}/handle",
             json=req.to_dict(),
-            timeout=120
+            timeout=300
         ).json()
 
         latency = time.time() - start
