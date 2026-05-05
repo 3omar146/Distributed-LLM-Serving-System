@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY common/ ./common/
 
-COPY client/requirements.txt .
+COPY Client/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY client/ .
+COPY Client/ .
 
 CMD ["python", "load_generator.py"]

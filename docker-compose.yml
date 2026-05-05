@@ -9,8 +9,6 @@ services:
     depends_on:
       master1:
         condition: service_healthy
-      # master2:
-      #   condition: service_healthy
     restart: unless-stopped
 
   master1:
@@ -18,15 +16,17 @@ services:
       context: .
       dockerfile: master/Dockerfile
     environment:
-      - WORKER_URLS=http://worker1:8000 #,http://worker2:8000,http://worker3:8000
-      - MAX_RETRIES=3
+      - WORKER_URLS=http://worker1:8000,http://worker2:8000,http://worker3:8000,http://worker4:8000
+      - MAX_RETRIES=${MAX_RETRIES:-12}
     depends_on:
       worker1:
         condition: service_healthy
-      # worker2:
-      #   condition: service_healthy
-      # worker3:
-      #   condition: service_healthy
+      worker2:
+        condition: service_healthy
+      worker3:
+        condition: service_healthy
+      worker4:
+        condition: service_healthy
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7000/health').read()"]
@@ -35,36 +35,14 @@ services:
       retries: 3
       start_period: 15s
 
-  # master2:
-  #   build:
-  #     context: .
-  #     dockerfile: master/Dockerfile
-  #   environment:
-  #     - WORKER_URLS=http://worker1:8000,http://worker2:8000,http://worker3:8000
-  #     - MAX_RETRIES=3
-  #   depends_on:
-  #     worker1:
-  #       condition: service_healthy
-  #     worker2:
-  #       condition: service_healthy
-  #     worker3:
-  #       condition: service_healthy
-  #   restart: unless-stopped
-  #   healthcheck:
-  #     test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7000/health').read()"]
-  #     interval: 10s
-  #     timeout: 5s
-  #     retries: 3
-  #     start_period: 15s
-
   worker1:
     build:
       context: .
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=1
-      - MAX_CONCURRENT=10
-      - GPU_SERVER_URL=https://posing-presentation-sitting-spell.trycloudflare.com
+      - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
+      - GPU_SERVER_URL=https://boots-sam-reason-hear.trycloudflare.com
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
@@ -75,41 +53,59 @@ services:
       retries: 5
       start_period: 30s
 
-  # worker2:
-  #   build:
-  #     context: .
-  #     dockerfile: workers/Dockerfile
-  #   environment:
-  #     - WORKER_ID=2
-  #     - MAX_CONCURRENT=4
-  #     - GPU_SERVER_URL=https://<vm2-tunnel-url>.trycloudflare.com
-  #     - MAX_NEW_TOKENS=150
-  #     - HF_TOKEN=${HF_TOKEN}
-  #   restart: unless-stopped
-  #   healthcheck:
-  #     test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
-  #     interval: 15s
-  #     timeout: 10s
-  #     retries: 5
-  #     start_period: 30s
+  worker2:
+    build:
+      context: .
+      dockerfile: workers/Dockerfile
+    environment:
+      - WORKER_ID=2
+      - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
+      - GPU_SERVER_URL=https://active-revision-assessing-mechanics.trycloudflare.com
+      - MAX_NEW_TOKENS=150
+      - HF_TOKEN=${HF_TOKEN}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
 
-  # worker3:
-  #   build:
-  #     context: .
-  #     dockerfile: workers/Dockerfile
-  #   environment:
-  #     - WORKER_ID=3
-  #     - MAX_CONCURRENT=4
-  #     - GPU_SERVER_URL=https://<vm3-tunnel-url>.trycloudflare.com
-  #     - MAX_NEW_TOKENS=150
-  #     - HF_TOKEN=${HF_TOKEN}
-  #   restart: unless-stopped
-  #   healthcheck:
-  #     test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
-  #     interval: 15s
-  #     timeout: 10s
-  #     retries: 5
-  #     start_period: 30s
+  worker3:
+    build:
+      context: .
+      dockerfile: workers/Dockerfile
+    environment:
+      - WORKER_ID=3
+      - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
+      - GPU_SERVER_URL=https://cant-tanks-partly-get.trycloudflare.com
+      - MAX_NEW_TOKENS=150
+      - HF_TOKEN=${HF_TOKEN}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  worker4:
+    build:
+      context: .
+      dockerfile: workers/Dockerfile
+    environment:
+      - WORKER_ID=4
+      - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
+      - GPU_SERVER_URL=https://scanning-victory-reproduce-tanks.trycloudflare.com
+      - MAX_NEW_TOKENS=150
+      - HF_TOKEN=${HF_TOKEN}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 90s
 
   client:
     build:
@@ -117,7 +113,7 @@ services:
       dockerfile: client/Dockerfile
     environment:
       - MASTER_URL=http://nginx:80
-      - NUM_USERS=${NUM_USERS:-50}
-      - RAMP_UP_RATE=${RAMP_UP_RATE:-5}
+      - NUM_USERS=${NUM_USERS:-1000}
+      - RAMP_UP_RATE=${RAMP_UP_RATE:-2}
     depends_on:
       - nginx

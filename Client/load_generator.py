@@ -42,7 +42,7 @@ def simulate_user(user_id, results):
         res = requests.post(
             f"{MASTER_URL}/handle",
             json=req.to_dict(),
-            timeout=300
+            timeout=9000
         ).json()
 
         latency = time.time() - start
@@ -66,7 +66,7 @@ def simulate_user(user_id, results):
 
 def fetch_master_analytics():
     try:
-        res = requests.get(f"{MASTER_URL}/analytics", timeout=5)
+        res = requests.get(f"{MASTER_URL}/analytics", timeout=9000)
         return res.json()
     except Exception as e:
         print(f"[Client] Could not fetch master analytics: {e}")
