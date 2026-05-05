@@ -62,8 +62,6 @@ class Worker:
                 status="success",
                 worker_id=self.id,
                 created_at=request.get("created_at"),
-                # Extra fields for analytics — make sure your Response dataclass supports **extra
-                # or add these as fields. See note below.
                 gpu_metrics=gpu_metrics,
                 gpu_latency=gpu_latency,
                 input_tokens=input_tokens,
@@ -109,7 +107,7 @@ def health():
     Master uses 'status' for routing decisions and 'gpu_metrics' for monitoring.
     """
     try:
-        r = requests.get(f"{GPU_SERVER_URL}/health", timeout=5)
+        r = requests.get(f"{GPU_SERVER_URL}/health", timeout=100)
         if r.status_code == 200:
             data = r.json()
             return {

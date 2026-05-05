@@ -42,8 +42,8 @@ services:
     environment:
       - WORKER_ID=1
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://boots-sam-reason-hear.trycloudflare.com
-      - MAX_NEW_TOKENS=150
+      - GPU_SERVER_URL=https://5lsof2aw-8080.thundercompute.net
+      - MAX_NEW_TOKENS=100
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
     healthcheck:
@@ -60,8 +60,8 @@ services:
     environment:
       - WORKER_ID=2
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://active-revision-assessing-mechanics.trycloudflare.com
-      - MAX_NEW_TOKENS=150
+      - GPU_SERVER_URL=https://4346ww9b-8080.thundercompute.net
+      - MAX_NEW_TOKENS=100
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
     healthcheck:
@@ -78,8 +78,8 @@ services:
     environment:
       - WORKER_ID=3
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://cant-tanks-partly-get.trycloudflare.com
-      - MAX_NEW_TOKENS=150
+      - GPU_SERVER_URL=https://4346ww9b-8080.thundercompute.net
+      - MAX_NEW_TOKENS=100
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
     healthcheck:
@@ -96,7 +96,7 @@ services:
     environment:
       - WORKER_ID=4
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://scanning-victory-reproduce-tanks.trycloudflare.com
+      - GPU_SERVER_URL=https://ihu67tkq-8080.thundercompute.net
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
