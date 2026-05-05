@@ -15,13 +15,17 @@ class Request:
 @dataclass
 class Response:
     id: int
-    result: str = ""
-    latency: float = 0.0
+    result: str = None
+    latency: float = None
     status: str = "success"
-    worker_id: Optional[int] = None
-    error: Optional[str] = None
-    created_at: Optional[float] = None
-    completed_at: float = field(default_factory=time.time)
+    error: str = None
+    worker_id: int = None
+    created_at: float = None
+    gpu_metrics: dict = None
+    gpu_latency: float = None
+    input_tokens: int = None
+    output_tokens: int = None
+    vm_label: str = None
 
     def to_dict(self):
         return asdict(self)

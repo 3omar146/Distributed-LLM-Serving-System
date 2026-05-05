@@ -122,6 +122,22 @@ def run_load_test(num_users=1000):
             print(f"    Success:   {successes}")
             print(f"    Failed:    {failures}")
 
+    print("\n--- GPU status per worker ---")
+    gpu_status = analytics.get("gpu_status_per_worker", {})
+    for worker, info in gpu_status.items():
+        if not info or "error" in (info or {}):
+            print(f"  {worker}: unavailable ({info.get('error', 'no data') if info else 'no data'})")
+            continue
+        metrics = info.get("gpu_metrics", {})
+        print(f"  {worker} ({info.get('vm_label', '?')})")
+        print(f"    Device:        {info.get('device')}")
+        print(f"    Model:         {info.get('model')}")
+        print(f"    GPU:           {metrics.get('gpu_name')}")
+        print(f"    GPU util:      {metrics.get('gpu_utilization_percent')}%")
+        print(f"    GPU memory:    {metrics.get('gpu_memory_used_mb')}/{metrics.get('gpu_memory_total_mb')} MB ({metrics.get('gpu_memory_used_percent')}%)")
+        print(f"    Temperature:   {metrics.get('gpu_temperature_c')}°C")
+        print(f"    Power:         {metrics.get('gpu_power_watts')}W")
+
 
 if __name__ == "__main__":
     num_users = int(os.getenv("NUM_USERS", 50))

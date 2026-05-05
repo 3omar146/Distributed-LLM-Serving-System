@@ -63,17 +63,17 @@ services:
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=1
-      - MAX_CONCURRENT=2
+      - MAX_CONCURRENT=4
+      - GPU_SERVER_URL=https://sanyo-national-parameters-council.trycloudflare.com
+      - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
-      - FAIL_RATE=0.1
-      - GROQ_API_KEYS=${GROQ_API_KEYS}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
       interval: 15s
       timeout: 10s
       retries: 5
-      start_period: 60s
+      start_period: 30s
 
   worker2:
     build:
@@ -81,17 +81,17 @@ services:
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=2
-      - MAX_CONCURRENT=2
+      - MAX_CONCURRENT=4
+      - GPU_SERVER_URL=https://<vm2-tunnel-url>.trycloudflare.com
+      - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
-      - FAIL_RATE=0.1
-      - GROQ_API_KEYS=${GROQ_API_KEYS}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
       interval: 15s
       timeout: 10s
       retries: 5
-      start_period: 60s
+      start_period: 30s
 
   worker3:
     build:
@@ -99,17 +99,17 @@ services:
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=3
-      - MAX_CONCURRENT=2
+      - MAX_CONCURRENT=4
+      - GPU_SERVER_URL=https://<vm3-tunnel-url>.trycloudflare.com
+      - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
-      - FAIL_RATE=0.1
-      - GROQ_API_KEYS=${GROQ_API_KEYS}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
       interval: 15s
       timeout: 10s
       retries: 5
-      start_period: 60s
+      start_period: 30s
 
   client:
     build:

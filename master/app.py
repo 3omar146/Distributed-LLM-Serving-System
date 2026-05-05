@@ -15,6 +15,7 @@ WORKER_URLS = os.getenv(
 MAX_RETRIES = int(os.getenv("MAX_RETRIES", 5))
 
 lock = threading.Lock()
+gpu_metrics_lock = threading.Lock()
 
 # analytics tracking
 analytics = {
@@ -26,17 +27,39 @@ analytics = {
     "failures_per_worker": {url: 0 for url in WORKER_URLS},
 }
 
+# latest GPU snapshot per worker (refreshed by every health check)
+latest_gpu_status = {url: None for url in WORKER_URLS}
+
 
 def get_worker_loads():
     loads = {}
     for url in WORKER_URLS:
         try:
-            r = requests.get(f"{url}/health", timeout=2)
+            r = requests.get(f"{url}/health", timeout=5)
             data = r.json()
+
+            # always capture whatever the worker tells us about its GPU,
+            # even if status is "degraded" (so /analytics can show the failure)
+            with gpu_metrics_lock:
+                latest_gpu_status[url] = {
+                    "status":      data.get("status"),
+                    "vm_label":    data.get("vm_label"),
+                    "device":      data.get("device"),
+                    "model":       data.get("model"),
+                    "gpu_backend": data.get("gpu_backend"),
+                    "gpu_metrics": data.get("gpu_metrics", {}),
+                }
+
+            # only treat fully-ok workers as eligible for routing
             if data.get("status") == "ok":
                 loads[url] = data.get("active_requests", 0)
         except Exception as e:
             print(f"[Master] Worker {url} excluded from pool: {e}")
+            with gpu_metrics_lock:
+                latest_gpu_status[url] = {
+                    "status": "unreachable",
+                    "error":  str(e),
+                }
     print(f"[Master] Current worker loads: {loads}")
     return loads
 
@@ -81,7 +104,7 @@ def handle(request: dict):
             res = requests.post(
                 f"{worker_url}/process",
                 json=request,
-                timeout=120
+                timeout=240
             )
             data = res.json()
 
@@ -123,7 +146,7 @@ def health():
         "status": "ok",
         "service": "master",
         "healthy_workers": len(worker_loads),
-        "worker_loads": worker_loads
+        "worker_loads": worker_loads,
     }
 
 
@@ -135,7 +158,7 @@ def get_analytics():
             round(analytics["successful_requests"] / total * 100, 2)
             if total > 0 else 0
         )
-        return {
+        result = {
             "total_requests":       analytics["total_requests"],
             "successful_requests":  analytics["successful_requests"],
             "failed_requests":      analytics["failed_requests"],
@@ -144,6 +167,17 @@ def get_analytics():
             "successes_per_worker": analytics["successes_per_worker"],
             "failures_per_worker":  analytics["failures_per_worker"],
         }
+
+    # refresh GPU snapshots so /analytics reflects current state, not stale data
+    get_worker_loads()
+
+    with gpu_metrics_lock:
+        result["gpu_status_per_worker"] = {
+            url: dict(info) if info else None
+            for url, info in latest_gpu_status.items()
+        }
+
+    return result
 
 
 @app.delete("/analytics/reset")
@@ -155,4 +189,7 @@ def reset_analytics():
         analytics["requests_per_worker"] = {url: 0 for url in WORKER_URLS}
         analytics["successes_per_worker"] = {url: 0 for url in WORKER_URLS}
         analytics["failures_per_worker"] = {url: 0 for url in WORKER_URLS}
+    with gpu_metrics_lock:
+        for url in WORKER_URLS:
+            latest_gpu_status[url] = None
     return {"status": "analytics reset"}
