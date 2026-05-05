@@ -63,7 +63,7 @@ services:
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=1
-      - MAX_CONCURRENT=4
+      - MAX_CONCURRENT=10
       - GPU_SERVER_URL=https://posing-presentation-sitting-spell.trycloudflare.com
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}

@@ -73,7 +73,7 @@ def fetch_master_analytics():
         return None
 
 
-def run_load_test(num_users=1000):
+def run_load_test(num_users=50):
     results = LoadTestResult()
     threads = []
 
