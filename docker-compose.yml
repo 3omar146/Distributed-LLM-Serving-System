@@ -42,7 +42,7 @@ services:
     environment:
       - WORKER_ID=1
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://boots-sam-reason-hear.trycloudflare.com
+      - GPU_SERVER_URL=https://crop-independence-cruises-saving.trycloudflare.com 
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
@@ -60,7 +60,7 @@ services:
     environment:
       - WORKER_ID=2
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://active-revision-assessing-mechanics.trycloudflare.com
+      - GPU_SERVER_URL=https://temporary-clicking-gray-sells.trycloudflare.com   
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
@@ -78,7 +78,7 @@ services:
     environment:
       - WORKER_ID=3
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://cant-tanks-partly-get.trycloudflare.com
+      - GPU_SERVER_URL=https://consists-safari-actually-journey.trycloudflare.com   
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
@@ -96,7 +96,7 @@ services:
     environment:
       - WORKER_ID=4
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://scanning-victory-reproduce-tanks.trycloudflare.com
+      - GPU_SERVER_URL=https://temporarily-specifically-both-tract.trycloudflare.com
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
