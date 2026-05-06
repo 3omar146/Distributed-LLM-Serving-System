@@ -42,7 +42,7 @@ services:
     environment:
       - WORKER_ID=1
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://crop-independence-cruises-saving.trycloudflare.com 
+      - GPU_SERVER_URL=https://wre2uzvn-8080.thundercompute.net 
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
@@ -60,7 +60,7 @@ services:
     environment:
       - WORKER_ID=2
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://temporary-clicking-gray-sells.trycloudflare.com   
+      - GPU_SERVER_URL=https://dkfhwpzs-8080.thundercompute.net   
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
@@ -78,7 +78,7 @@ services:
     environment:
       - WORKER_ID=3
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://consists-safari-actually-journey.trycloudflare.com   
+      - GPU_SERVER_URL=https://j9cfi0cj-8080.thundercompute.net   
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped
@@ -96,7 +96,7 @@ services:
     environment:
       - WORKER_ID=4
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://temporarily-specifically-both-tract.trycloudflare.com
+      - GPU_SERVER_URL=https://cix0h16w-8080.thundercompute.net
       - MAX_NEW_TOKENS=150
       - HF_TOKEN=${HF_TOKEN}
     restart: unless-stopped

@@ -30,7 +30,7 @@ splits = text_splitter.split_documents(docs)
 
 embedding_model = HuggingFaceEndpointEmbeddings(
     huggingfacehub_api_token=HF_TOKEN,
-    model="sentence-transformers/all-MiniLM-L6-v2"
+    model="sentence-transformers/all-MiniLM-L6-v2",
 )
 
 vectorstore = FAISS.from_documents(documents=splits, embedding=embedding_model)
@@ -49,8 +49,9 @@ Context: {context}
 Answer:"""
 prompt = PromptTemplate.from_template(template)
 
+
 def invoke_llm(formatted_prompt: str) -> dict:
-    """Original Single Request Function"""
+    """Single-prompt path. Kept for tooling/debugging."""
     if not GPU_SERVER_URL:
         raise RuntimeError("GPU_SERVER_URL not configured")
     res = requests.post(
@@ -64,16 +65,20 @@ def invoke_llm(formatted_prompt: str) -> dict:
         raise RuntimeError(f"GPU server returned not-ok: {data}")
     return data
 
+
 def invoke_llm_batch(formatted_prompts: list) -> list:
     """
-    DYNAMIC BATCHING: Sends multiple prompts to the GPU at once.
-    Includes a fallback in case the GPU server only accepts strings.
+    True GPU batching: send the whole list in one HTTP call so the GPU server
+    runs a single batched model.generate(). The fallback only runs if the GPU
+    server is older / doesn't return a list, so we still get a result.
     """
     if not GPU_SERVER_URL:
         raise RuntimeError("GPU_SERVER_URL not configured")
-    
+
+    if not formatted_prompts:
+        return []
+
     try:
-        # Attempt True GPU Batching (Sending a list)
         res = requests.post(
             f"{GPU_SERVER_URL}/generate",
             json={"prompt": formatted_prompts, "max_new_tokens": MAX_NEW_TOKENS},
@@ -81,24 +86,35 @@ def invoke_llm_batch(formatted_prompts: list) -> list:
         )
         res.raise_for_status()
         data = res.json()
-        
-        # If the GPU server natively supports and returns a list of results
-        if isinstance(data, list):
-            return data
-            
-    except Exception as e:
-        print(f"[RAG] Native GPU batching failed/unsupported. Using concurrent fallback...")
 
-    # FALLBACK: If GPU server doesn't support arrays, blast the requests 
-    # concurrently from a background thread pool to avoid locking up FastAPI.
-    results = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=len(formatted_prompts)) as executor:
-        futures = [executor.submit(invoke_llm, p) for p in formatted_prompts]
-        for future in futures:
+        if isinstance(data, list) and len(data) == len(formatted_prompts):
+            return data
+
+        # GPU server didn't honor batching — log and fall through.
+        print(
+            f"[RAG] GPU server returned non-list or wrong length "
+            f"(type={type(data).__name__}, expected {len(formatted_prompts)}). "
+            f"Falling back to concurrent single calls."
+        )
+    except Exception as e:
+        print(f"[RAG] Native GPU batching failed: {e}. Using concurrent fallback...")
+
+    # Fallback: fire single-prompt calls concurrently.
+    results = [None] * len(formatted_prompts)
+    with concurrent.futures.ThreadPoolExecutor(
+        max_workers=min(len(formatted_prompts), 16)
+    ) as executor:
+        future_to_idx = {
+            executor.submit(invoke_llm, p): i
+            for i, p in enumerate(formatted_prompts)
+        }
+        for future in concurrent.futures.as_completed(future_to_idx):
+            idx = future_to_idx[future]
             try:
-                results.append(future.result())
+                results[idx] = future.result()
             except Exception as exc:
-                results.append({"answer": f"Error: {exc}", "metrics": {}})
+                results[idx] = {"answer": f"Error: {exc}", "metrics": {}}
     return results
+
 
 print("Global RAG System Ready!")
