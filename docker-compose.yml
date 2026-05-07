@@ -9,6 +9,8 @@ services:
     depends_on:
       master1:
         condition: service_healthy
+      master2:
+        condition: service_healthy
     restart: unless-stopped
 
   master1:
@@ -16,17 +18,37 @@ services:
       context: .
       dockerfile: master/Dockerfile
     environment:
-      - WORKER_URLS=http://worker1:8000,http://worker2:8000,http://worker3:8000 #,http://worker4:8000
-      - MAX_RETRIES=${MAX_RETRIES:-12}
+      - WORKER_URLS=http://worker1:8000,http://worker2:8000 #,http://worker3:8000 #,http://worker4:8000
+    env_file:
+      - .env
     depends_on:
       worker1:
         condition: service_healthy
       worker2:
         condition: service_healthy
-      worker3:
-        condition: service_healthy
+      # worker3:
+      #   condition: service_healthy
       # worker4:
       #   condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7000/health').read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  master2:
+    build:
+      context: .
+      dockerfile: master/Dockerfile
+    environment:
+      - WORKER_URLS=http://worker3:8000 #,http://worker4:8000
+    env_file:
+      - .env
+    depends_on:
+      worker3:
+        condition: service_healthy
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7000/health').read()"]
@@ -42,9 +64,10 @@ services:
     environment:
       - WORKER_ID=1
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://wre2uzvn-8080.thundercompute.net 
-      - MAX_NEW_TOKENS=150
+      - GPU_SERVER_URL=https://dg4c7gst-8080.thundercompute.net 
       - HF_TOKEN=${HF_TOKEN}
+    env_file:
+      - .env   
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
@@ -59,10 +82,9 @@ services:
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=2
-      - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://6drrn2gm-8080.thundercompute.net   
-      - MAX_NEW_TOKENS=150
-      - HF_TOKEN=${HF_TOKEN}
+      - GPU_SERVER_URL=https://d3apdxp5-8080.thundercompute.net   
+    env_file:
+      - .env
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
@@ -77,10 +99,9 @@ services:
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=3
-      - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://vupul4au-8080.thundercompute.net   
-      - MAX_NEW_TOKENS=150
-      - HF_TOKEN=${HF_TOKEN}
+      - GPU_SERVER_URL=https://1onkyt6h-8080.thundercompute.net 
+    env_file:
+      - .env  
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
@@ -95,10 +116,9 @@ services:
   #     dockerfile: workers/Dockerfile
   #   environment:
   #     - WORKER_ID=4
-  #     - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
   #     - GPU_SERVER_URL=https://cix0h16w-8080.thundercompute.net
-  #     - MAX_NEW_TOKENS=150
-  #     - HF_TOKEN=${HF_TOKEN}
+      # env_file:
+      # - .env
   #   restart: unless-stopped
   #   healthcheck:
   #     test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
@@ -113,7 +133,7 @@ services:
       dockerfile: client/Dockerfile
     environment:
       - MASTER_URL=http://nginx:80
-      - NUM_USERS=${NUM_USERS:-1000}
-      - RAMP_UP_RATE=${RAMP_UP_RATE:-2}
+    env_file:
+      - .env
     depends_on:
       - nginx

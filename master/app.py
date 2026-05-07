@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+
+from fastapi import FastAPI, HTTPException, Response
 import requests
 import time
 import os
@@ -15,7 +16,7 @@ WORKER_URLS = [u.strip() for u in os.getenv(
 MAX_RETRIES = int(os.getenv("MAX_RETRIES", 5))
 HEALTH_INTERVAL = float(os.getenv("HEALTH_INTERVAL", 3.0))   # seconds between sweeps
 HEALTH_TIMEOUT = float(os.getenv("HEALTH_TIMEOUT", 10))     # per-worker probe timeout
-HEALTH_STALE_AFTER = float(os.getenv("HEALTH_STALE_AFTER", 5.0))  # ignore loads older than this
+FAIL_PROBES_THRESHOLD = int(os.getenv("FAIL_THRESHOLD", 3))
 
 analytics_lock = threading.Lock()
 gpu_metrics_lock = threading.Lock()
@@ -37,12 +38,10 @@ latest_gpu_status = {url: None for url in WORKER_URLS}
 # Cached worker loads (refreshed by the health-loop thread).
 load_cache = {
     "loads": {},   # url -> active_requests reported by worker
-    "ts":    {},   # url -> last successful refresh timestamp
+    "fails": {url: 0 for url in WORKER_URLS},  # consecutive failed probes
 }
 
-# In-flight counter: requests we've dispatched to a worker that haven't
-# returned yet. Added to the cached load when ranking, so 50 simultaneous
-# routing decisions don't all stampede onto the same "least loaded" worker.
+
 inflight_lock = threading.Lock()
 inflight = {url: 0 for url in WORKER_URLS}
 
@@ -68,14 +67,8 @@ def _probe_worker(url):
 
 
 def _probe_loop(url):
-    """Per-worker probe thread: refreshes load + GPU snapshot for ONE worker.
-
-    Running one thread per worker (instead of a single sequential sweep)
-    means a slow/dead worker only blocks itself. Healthy workers' first
-    probes land in the cache within <1s of startup, eliminating the
-    "No healthy workers available" window that used to last the full
-    HEALTH_TIMEOUT after master boot.
-    """
+    """Per-worker probe thread. Excludes a worker after FAIL_THRESHOLD
+    consecutive failed probes; re-includes immediately on the next success."""
     while True:
         load, snapshot = _probe_worker(url)
 
@@ -83,15 +76,16 @@ def _probe_loop(url):
             latest_gpu_status[url] = snapshot
 
         with load_cache_lock:
-            now = time.time()
             if load is not None:
+                # Healthy: refresh load, reset fail counter
                 load_cache["loads"][url] = load
-                load_cache["ts"][url] = now
+                load_cache["fails"][url] = 0
             else:
-                # Probe failed — evict if the last successful probe is stale.
-                last_ts = load_cache["ts"].get(url, 0)
-                if last_ts and now - last_ts > HEALTH_STALE_AFTER:
+                # Failed probe: increment, evict if we've crossed the threshold
+                load_cache["fails"][url] += 1
+                if load_cache["fails"][url] == FAIL_PROBES_THRESHOLD:
                     load_cache["loads"].pop(url, None)
+                    print(f"[Master] Worker {url} evicted after "f"{load_cache['fails'][url]} failed probes")
 
         time.sleep(HEALTH_INTERVAL)
 
@@ -120,20 +114,18 @@ def get_best_worker(exclude=None):
         # since its last health report. Prevents stampedes.
         effective = {
             url: loads[url] + inflight.get(url, 0)
-            for url in loads
+            for url in loads if url != exclude
         }
+        if not effective and exclude is not None and exclude in loads:
+            effective = {exclude: loads[exclude] + inflight.get(exclude, 0)}
 
-    eligible = {url: load for url, load in effective.items() if url != exclude}
-    if not eligible:
-        eligible = effective
-
-    min_load = min(eligible.values())
-    candidates = [url for url, load in eligible.items() if load == min_load]
+    min_load = min(effective.values())
+    candidates = [url for url, load in effective.items() if load == min_load]
     return random.choice(candidates)
 
 
 @app.post("/handle")
-def handle(request: dict):
+def handle(request: dict, response: Response):
     attempt = 0
     print(f"[Master] Received request {request.get('id')}")
 
@@ -148,11 +140,11 @@ def handle(request: dict):
         if not worker_url:
             with analytics_lock:
                 analytics["failed_requests"] += 1
-            return {
-                "id": request.get("id"),
-                "status": "failed",
-                "error": "No healthy workers available",
-            }
+            print(f"[Master] No healthy workers available for request {request.get('id')}")
+            raise HTTPException(
+                    status_code=503, 
+                    detail={"id": request.get("id"), "error": "No healthy workers available"}
+                )
 
         try:
             print(
@@ -171,7 +163,7 @@ def handle(request: dict):
                 res = requests.post(
                     f"{worker_url}/process",
                     json=request,
-                    timeout=240,
+                    timeout=305,
                 )
                 data = res.json()
             finally:
