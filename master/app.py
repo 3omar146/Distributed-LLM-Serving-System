@@ -14,7 +14,7 @@ WORKER_URLS = [u.strip() for u in os.getenv(
 
 MAX_RETRIES = int(os.getenv("MAX_RETRIES", 5))
 HEALTH_INTERVAL = float(os.getenv("HEALTH_INTERVAL", 3.0))   # seconds between sweeps
-HEALTH_TIMEOUT = float(os.getenv("HEALTH_TIMEOUT", 100))     # per-worker probe timeout
+HEALTH_TIMEOUT = float(os.getenv("HEALTH_TIMEOUT", 10))     # per-worker probe timeout
 HEALTH_STALE_AFTER = float(os.getenv("HEALTH_STALE_AFTER", 5.0))  # ignore loads older than this
 
 analytics_lock = threading.Lock()
@@ -67,44 +67,48 @@ def _probe_worker(url):
         return None, {"status": "unreachable", "error": str(e)}
 
 
-def _health_loop():
-    """Background thread: refresh worker loads + GPU snapshots periodically.
+def _probe_loop(url):
+    """Per-worker probe thread: refreshes load + GPU snapshot for ONE worker.
 
-    This replaces the old per-request health probing, which caused a
-    thundering-herd: 1000 concurrent /handle calls = 1000 health probes hitting
-    every worker simultaneously, each with a 5s timeout.
+    Running one thread per worker (instead of a single sequential sweep)
+    means a slow/dead worker only blocks itself. Healthy workers' first
+    probes land in the cache within <1s of startup, eliminating the
+    "No healthy workers available" window that used to last the full
+    HEALTH_TIMEOUT after master boot.
     """
     while True:
-        new_loads = {}
-        for url in WORKER_URLS:
-            load, snapshot = _probe_worker(url)
+        load, snapshot = _probe_worker(url)
 
-            with gpu_metrics_lock:
-                latest_gpu_status[url] = snapshot
-
-            if load is not None:
-                new_loads[url] = load
+        with gpu_metrics_lock:
+            latest_gpu_status[url] = snapshot
 
         with load_cache_lock:
             now = time.time()
-            for url, load in new_loads.items():
+            if load is not None:
                 load_cache["loads"][url] = load
                 load_cache["ts"][url] = now
-            # Drop entries we couldn't refresh this round if they're too stale.
-            stale_cutoff = now - HEALTH_STALE_AFTER
-            for url in list(load_cache["loads"].keys()):
-                if load_cache["ts"].get(url, 0) < stale_cutoff:
+            else:
+                # Probe failed — evict if the last successful probe is stale.
+                last_ts = load_cache["ts"].get(url, 0)
+                if last_ts and now - last_ts > HEALTH_STALE_AFTER:
                     load_cache["loads"].pop(url, None)
 
         time.sleep(HEALTH_INTERVAL)
 
 
-# Kick the health loop off at import time.
-threading.Thread(target=_health_loop, daemon=True).start()
+# Kick off one probe thread per worker at import time.
+for _url in WORKER_URLS:
+    threading.Thread(target=_probe_loop, args=(_url,), daemon=True).start()
 
 
-def get_best_worker():
-    """Pick the worker with the lowest effective load (cached + in-flight)."""
+def get_best_worker(exclude=None):
+    """Pick the worker with the lowest effective load (cached + in-flight).
+
+    `exclude` is an optional URL to skip — used on retries so we don't
+    immediately re-send to the worker that just failed. Falls back to the
+    excluded worker if it's the only one healthy (better to retry the same
+    one than give up).
+    """
     with load_cache_lock:
         loads = dict(load_cache["loads"])
 
@@ -119,8 +123,12 @@ def get_best_worker():
             for url in loads
         }
 
-    min_load = min(effective.values())
-    candidates = [url for url, load in effective.items() if load == min_load]
+    eligible = {url: load for url, load in effective.items() if url != exclude}
+    if not eligible:
+        eligible = effective
+
+    min_load = min(eligible.values())
+    candidates = [url for url, load in eligible.items() if load == min_load]
     return random.choice(candidates)
 
 
@@ -135,7 +143,7 @@ def handle(request: dict):
     last_worker = None
 
     while attempt <= MAX_RETRIES:
-        worker_url = get_best_worker()
+        worker_url = get_best_worker(exclude=last_worker)
 
         if not worker_url:
             with analytics_lock:

@@ -1,6 +1,5 @@
 import os
 import requests
-import concurrent.futures
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
@@ -67,54 +66,20 @@ def invoke_llm(formatted_prompt: str) -> dict:
 
 
 def invoke_llm_batch(formatted_prompts: list) -> list:
-    """
-    True GPU batching: send the whole list in one HTTP call so the GPU server
-    runs a single batched model.generate(). The fallback only runs if the GPU
-    server is older / doesn't return a list, so we still get a result.
-    """
+    """Send the whole batch in one HTTP call. Any failure raises to the worker."""
     if not GPU_SERVER_URL:
         raise RuntimeError("GPU_SERVER_URL not configured")
 
     if not formatted_prompts:
         return []
 
-    try:
-        res = requests.post(
-            f"{GPU_SERVER_URL}/generate",
-            json={"prompt": formatted_prompts, "max_new_tokens": MAX_NEW_TOKENS},
-            timeout=240,
-        )
-        res.raise_for_status()
-        data = res.json()
-
-        if isinstance(data, list) and len(data) == len(formatted_prompts):
-            return data
-
-        # GPU server didn't honor batching — log and fall through.
-        print(
-            f"[RAG] GPU server returned non-list or wrong length "
-            f"(type={type(data).__name__}, expected {len(formatted_prompts)}). "
-            f"Falling back to concurrent single calls."
-        )
-    except Exception as e:
-        print(f"[RAG] Native GPU batching failed: {e}. Using concurrent fallback...")
-
-    # Fallback: fire single-prompt calls concurrently.
-    results = [None] * len(formatted_prompts)
-    with concurrent.futures.ThreadPoolExecutor(
-        max_workers=min(len(formatted_prompts), 16)
-    ) as executor:
-        future_to_idx = {
-            executor.submit(invoke_llm, p): i
-            for i, p in enumerate(formatted_prompts)
-        }
-        for future in concurrent.futures.as_completed(future_to_idx):
-            idx = future_to_idx[future]
-            try:
-                results[idx] = future.result()
-            except Exception as exc:
-                results[idx] = {"answer": f"Error: {exc}", "metrics": {}}
-    return results
+    res = requests.post(
+        f"{GPU_SERVER_URL}/generate",
+        json={"prompt": formatted_prompts, "max_new_tokens": MAX_NEW_TOKENS},
+        timeout=240,
+    )
+    res.raise_for_status()
+    return res.json()
 
 
 print("Global RAG System Ready!")

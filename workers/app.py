@@ -159,6 +159,8 @@ class DynamicBatchWorker:
             "event": threading.Event(),
             "response": None,
         }
+        with self.lock:
+            self.active_requests += 1
         self.request_queue.put(task)
 
         # Wait for the bus driver to wake us. _execute_batch's finally always
