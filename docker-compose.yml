@@ -43,11 +43,13 @@ services:
       context: .
       dockerfile: master/Dockerfile
     environment:
-      - WORKER_URLS=http://worker3:8000 #,http://worker4:8000
+      - WORKER_URLS=http://worker3:8000,http://worker4:8000
     env_file:
       - .env
     depends_on:
       worker3:
+        condition: service_healthy
+      worker4:
         condition: service_healthy
     restart: unless-stopped
     healthcheck:
@@ -64,7 +66,7 @@ services:
     environment:
       - WORKER_ID=1
       - MAX_CONCURRENT=${MAX_CONCURRENT:-20}
-      - GPU_SERVER_URL=https://dg4c7gst-8080.thundercompute.net 
+      - GPU_SERVER_URL=https://wbq91hyt-8080.thundercompute.net
       - HF_TOKEN=${HF_TOKEN}
     env_file:
       - .env   
@@ -82,7 +84,7 @@ services:
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=2
-      - GPU_SERVER_URL=https://d3apdxp5-8080.thundercompute.net   
+      - GPU_SERVER_URL=https://utozzmg0-8080.thundercompute.net   
     env_file:
       - .env
     restart: unless-stopped
@@ -99,7 +101,7 @@ services:
       dockerfile: workers/Dockerfile
     environment:
       - WORKER_ID=3
-      - GPU_SERVER_URL=https://1onkyt6h-8080.thundercompute.net 
+      - GPU_SERVER_URL=https://3mbyyxu4-8080.thundercompute.net 
     env_file:
       - .env  
     restart: unless-stopped
@@ -110,22 +112,22 @@ services:
       retries: 5
       start_period: 30s
 
-  # worker4:
-  #   build:
-  #     context: .
-  #     dockerfile: workers/Dockerfile
-  #   environment:
-  #     - WORKER_ID=4
-  #     - GPU_SERVER_URL=https://cix0h16w-8080.thundercompute.net
-      # env_file:
-      # - .env
-  #   restart: unless-stopped
-  #   healthcheck:
-  #     test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
-  #     interval: 15s
-  #     timeout: 10s
-  #     retries: 5
-  #     start_period: 90s
+  worker4:
+    build:
+      context: .
+      dockerfile: workers/Dockerfile
+    environment:
+      - WORKER_ID=4
+      - GPU_SERVER_URL=https://3mbyyxu4-8080.thundercompute.net
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 90s
 
   client:
     build:

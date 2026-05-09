@@ -214,6 +214,7 @@ def health():
             }
     except Exception:
         pass
+    print(f"[Worker {worker.id}] GPU server unreachable at {GPU_SERVER_URL}")
     return {
         "status": "degraded",
         "worker_id": worker.id,
