@@ -18,7 +18,7 @@ services:
       context: .
       dockerfile: master/Dockerfile
     environment:
-      - WORKER_URLS=http://worker1:8000,http://worker2:8000 #,http://worker3:8000 #,http://worker4:8000
+      - WORKER_URLS=http://worker1:8000,http://worker2:8000 #,http://worker3:8000,http://worker4:8000
     env_file:
       - .env
     depends_on:
@@ -43,10 +43,14 @@ services:
       context: .
       dockerfile: master/Dockerfile
     environment:
-      - WORKER_URLS=http://worker3:8000,http://worker4:8000
+      - WORKER_URLS=http://worker3:8000,http://worker4:8000 #,http://worker1:8000,http://worker2:8000,
     env_file:
       - .env
     depends_on:
+      # worker1:
+      #   condition: service_healthy
+      # worker2:
+      #   condition: service_healthy
       worker3:
         condition: service_healthy
       worker4:
