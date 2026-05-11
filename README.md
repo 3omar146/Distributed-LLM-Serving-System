@@ -49,7 +49,7 @@ The final branch is the result of several iterations, each solving a bottleneck 
 
 ### Iteration 1: Single-process prototype
 
-The earliest design used local Python classes in one process to simulate workers and a load balancer. This was useful for validating control flow, but it had no real network distribution and no real fault isolation. The commented `main.py` file in this repository is a leftover reference to that prototype stage.
+The earliest design used local Python classes in one process to simulate workers and a load balancer. This was useful for validating control flow, but it had no real network distribution and no real fault isolation.
 
 ### Iteration 2: Real LLM calls through an external API
 
@@ -216,7 +216,6 @@ Retry semantics on `/handle`:
 
 ### Legacy reference files
 
-- `main.py`: commented prototype from the early single-process design
 - `no_batch_server.py`: older non-batched GPU server kept for comparison/debugging
 
 ## Load Balancing and Batching
