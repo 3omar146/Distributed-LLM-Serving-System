@@ -7,6 +7,8 @@ import time
 import threading
 import os
 
+#uvicorn gpu_server:app --host 0.0.0.0 --port 8080
+
 try:
     import pynvml
     pynvml.nvmlInit()
