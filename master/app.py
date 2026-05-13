@@ -27,9 +27,9 @@ analytics = {
     "total_requests": 0,
     "successful_requests": 0,
     "failed_requests": 0,
-    "requests_per_worker":  {url: 0 for url in WORKER_URLS},
-    "successes_per_worker": {url: 0 for url in WORKER_URLS},
-    "failures_per_worker":  {url: 0 for url in WORKER_URLS},
+    "attempt_requests_per_worker":  {url: 0 for url in WORKER_URLS},
+    "attempt_successes_per_worker": {url: 0 for url in WORKER_URLS},
+    "attempt_failures_per_worker":  {url: 0 for url in WORKER_URLS},
 }
 
 # Latest GPU snapshot per worker (refreshed by the health-loop thread).
