@@ -188,11 +188,10 @@ def print_aggregated_report(per_master, combined):
                 if not info:
                     print(f"    {worker}  (no snapshot)")
                     continue
-                label  = info.get("vm_label") or "?"
                 device = info.get("device") or "?"
                 model  = info.get("model") or "?"
                 status = info.get("status") or "?"
-                print(f"    {worker}  [{label}] status={status} device={device} model={model}")
+                print(f"    {worker} status={status} device={device} model={model}")
                 m = info.get("gpu_metrics") or {}
                 if not m or not m.get("gpu_available"):
                     print("        gpu_available=False")

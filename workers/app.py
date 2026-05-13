@@ -165,7 +165,6 @@ class DynamicBatchWorker:
 
         # Wait for the bus driver to wake us. _execute_batch's finally always
         # runs and decrements active_requests, so we DO NOT decrement here on
-        # timeout — that would double-decrement and corrupt the load counter.
         completed = task["event"].wait(timeout=300)
 
         if completed and task["response"]:
