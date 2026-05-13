@@ -179,7 +179,7 @@ def print_aggregated_report(per_master, combined):
             sent = reqs_per_worker.get(worker, 0)
             ok   = succ_per_worker.get(worker, 0)
             fail = fail_per_worker.get(worker, 0)
-            print(f"    {worker}  sent={sent}  ok={ok}  fail={fail}")
+            print(f"    {worker}  attempts_sent={sent}  attempts_success={ok}  attempts_fail={fail}")
 
         if gpu_per_worker:
             print("\n  --- GPU metrics per worker ---")
@@ -217,7 +217,7 @@ async def main():
         max_connections=NUM_USERS + 50,
         max_keepalive_connections=NUM_USERS + 50,
     )
-    print(f"Async load test: {NUM_USERS} users, ramp_rate={RAMP_UP_RATE}/s")
+    print(f"load test: {NUM_USERS} users")
     print(f"Traffic target: {MASTER_URL}")
     print(f"Analytics sources: {MASTER_DIRECT_URLS}")
 
@@ -232,7 +232,7 @@ async def main():
         total = time.time() - start
 
         # ===== Client-side report (source of truth for client request count) =====
-        print("\n===== ASYNC LOAD TEST REPORT (CLIENT SIDE) =====")
+        print("\n===== LOAD TEST REPORT (CLIENT SIDE) =====")
         print(f"Total client requests:  {results.total}")
         print(f"Success:                {results.success}")
         print(f"Failed:                 {results.failed}")
