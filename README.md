@@ -2,7 +2,6 @@
 
 A five-tier distributed system for serving 1,000+ concurrent LLM + RAG requests across a cluster of local Docker services and remote GPU VMs, with dynamic batching, layered retries, and end-to-end fault tolerance.
 
-> Final project branch: `elbatch_elnha2y_bel_fault_tolerance`
 >
 > Important: this repository contains several experimental branches (`API_based`, `batching`, `thundercompute`, `thunder1000`, `elbatch-elnha2y`). Those branches were trial stages during development. The final integrated system with batching + fault tolerance is the branch above.
 
