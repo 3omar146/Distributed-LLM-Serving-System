@@ -34,14 +34,6 @@ This project implements a distributed inference cluster that can absorb 1,000+ c
 
 The final design removes the need for a centralized external LLM API and turns the system into a real distributed serving pipeline with observable GPU-backed inference.
 
-## Branch Scope
-
-This README documents the code currently implemented on:
-
-- `elbatch_elnha2y_bel_fault_tolerance`
-
-It does **not** describe the older trial branches as the final architecture. The other branches exist to show the development path, but they should be treated as intermediate experiments rather than the final submission.
-
 ## Architectural Evolution
 
 The final branch is the result of several iterations, each solving a bottleneck exposed by the previous design.
